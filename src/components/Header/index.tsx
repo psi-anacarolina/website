@@ -38,7 +38,8 @@ export function Header() {
               <span className="block h-1 w-full bg-white"></span>
             </div>
           </button>
-          <nav className={`absolute right-0 top-0 h-full bg-white transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} w-1/2`}>
+          {/* Menu mobile */}
+          <nav className={`fixed right-0 top-0 h-full bg-white transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} w-[70vw] md:w-full z-50`}>
             <div className="flex flex-col items-start p-4">
               <button onClick={toggleMenu} className="self-end mb-4">
                 <span className="block h-1 w-6 bg-neutral-900"></span>
@@ -63,6 +64,7 @@ export function Header() {
               </ul>
             </div>
           </nav>
+          {/* Menu desktop */}
           <nav className="hidden md:flex">
             <ul className="flex flex-row gap-10">
               <Link href='#home'>
